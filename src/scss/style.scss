@@ -1,0 +1,230 @@
+// Global SCSS-files imports
+@import "./mixins";
+@import "./vars";
+@import "./reset";
+@import "./fonts";
+@import "./global";
+
+// Sections or Pages SCSS-files imports
+@import "./header";
+
+@import "./header-main";
+@import "./chair-slider";
+@import "./professional";
+@import "./tabs";
+@import "./clients";
+@import "./product";
+@import "./info";
+@import "./articles";
+
+@import "./footer";
+
+// Libs
+@import "./libs/swiper";
+
+html,
+body {
+  height: 100%;
+  font-family: NunitoSans;
+  color: $primary;
+  font-weight: 400;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  &._top {
+    padding-top: 80px;
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header * {
+  transition: all 0.3s ease;
+}
+.main {
+  flex: 1 1 auto;
+}
+.add-to-cart {
+  background-color: transparent;
+}
+.cart-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 15;
+  transform: translateX(-200%);
+  transition: 0.5s ease-out;
+}
+
+.cart-modal {
+  height: 100vh;
+  width: 50%;
+  padding: 30px;
+  background-color: #e5e5e5;
+  float: right;
+  overflow: scroll;
+  overflow-x: hidden;
+  @include lg {
+    padding: 10px;
+  }
+  @include sm {
+    width: 100%;
+  }
+}
+.total {
+  text-align: center;
+  padding: 20px;
+  @include sm {
+    padding: 0px;
+  }
+}
+.cart-total {
+  font-size: 45px;
+  color: white;
+  color: $primary;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+    @include sm {
+      margin-bottom: 5px;
+    }
+  }
+  @include sm {
+    font-size: 30px;
+  }
+}
+.total-price {
+  color: $primary;
+  font-size: 2rem;
+  display: block;
+  @include sm {
+    font-size: 20px;
+  }
+}
+.purchase-btn {
+  font-size: 16px;
+  font-weight: bolder;
+  background-color: green;
+  color: white;
+  padding: 15px 20px 15px 20px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin: 20px 0px 0px 0px;
+  @include xs {
+    width: 100%;
+  }
+}
+.product-quantity {
+  background-color: #d5d5d5;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  @include lg {
+    width: 90px;
+  }
+  @include lg {
+    width: 50%;
+  }
+}
+
+#close-btn {
+  float: right;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease 0s;
+  &:hover {
+    transform: rotate(95deg);
+  }
+}
+.product-rows {
+  padding: 35px 20px 20px 20px;
+  @media (max-width: 1149.98px) {
+    padding: 35px 20px 20px 0px;
+  }
+  @include lg {
+    padding: 35px 0px 20px 0px;
+  }
+}
+.product-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  @media (max-width: 1149.98px) {
+    gap: 20px;
+  }
+  @include lg {
+    gap: 10px;
+  }
+}
+.cart-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  @include md {
+    width: 100%;
+    gap: 10px;
+  }
+}
+.cart-image {
+  width: 53px;
+}
+.cart-price {
+  color: $primary;
+  font-size: 25px;
+  min-width: 96px;
+  @include lg {
+    font-size: 16px;
+    min-width: 60px;
+  }
+  @include md {
+  }
+}
+
+.remove-btn {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #d5d5d5;
+  transition: 0.3s ease;
+  &:hover {
+    background-color: #ffffff;
+  }
+  @include lg {
+    width: 50%;
+  }
+}
+.cart-is-empty {
+  display: none;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 50px;
+}
+
+/* Для Chrome */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+/* Для Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

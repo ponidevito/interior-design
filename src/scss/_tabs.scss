@@ -1,0 +1,119 @@
+.tabs {
+  width: 100%;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include lg {
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: center;
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-around;
+    }
+    &-item {
+      padding: 7px 20px;
+      color: #353535;
+      cursor: pointer;
+      &.active {
+        background-color: black;
+        color: #ffffff;
+      }
+    }
+  }
+  &__content-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: 1150px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__content-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__content-picture {
+   width: 255px;
+    height: 274px;
+    padding: 65px 75px 30px 75px;
+    background: #f7f7f7;
+    @media (max-width: 1150px) {
+      text-align: center;
+      width: unset;
+    }
+  }
+
+  &__content-buy {
+    padding: 10px 0px;
+    background: #1c1b1b;
+  }
+
+  &__content-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  &__content-icon {
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  &__content-name {
+    padding-top: 6px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 156%;
+    color: #282828;
+    padding-bottom: 9px;
+  }
+  &__content {
+    margin-top: 34px;
+  }
+
+  &__content-pricing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content-price {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__content-oldPrice {
+    color: #737373;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #737373;
+      left: 0;
+      top: 50%;
+    }
+  }
+
+  &__content-stars {
+    display: flex;
+    gap: 5px;
+  }
+}

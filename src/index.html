@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+     <!-- scroll up -->
+      <button id="topBtn" class="topBox" onclick="topFunction()">
+        <svg width="24" height="45" viewBox="0 0 24 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.0607 0.93934C12.4749 0.353553 11.5251 0.353553 10.9393 0.93934L1.3934 10.4853C0.80761 11.0711 0.80761 12.0208 1.3934 12.6066C1.97918 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.93934ZM13.5 45L13.5 2L10.5 2L10.5 45L13.5 45Z" fill="white"/>
+          </svg>
+                      
+      </button>  
+      <!-- Modal -->
+      <div class="cart-modal-overlay">
+        <div class="cart-modal">
+            <svg id="close-btn" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_388_142)">
+                <path d="M17.5 35C27.165 35 35 27.165 35 17.5C35 7.83502 27.165 0 17.5 0C7.83502 0 0 7.83502 0 17.5C0 27.165 7.83502 35 17.5 35Z" fill="#536779"/>
+                <path d="M27.4258 24.7188L20.207 17.5L27.3984 10.2812C27.5078 10.1719 27.5078 10.0078 27.3984 9.89844L25.0742 7.57422C24.9648 7.46484 24.8008 7.46484 24.6914 7.57422L17.5 14.793L10.3086 7.60156C10.1992 7.49219 10.0352 7.49219 9.92578 7.60156L7.60156 9.92578C7.49219 10.0352 7.49219 10.1992 7.60156 10.3086L14.7656 17.5L7.57422 24.6914C7.46484 24.8008 7.46484 24.9648 7.57422 25.0742L9.89844 27.3984C10.0078 27.5078 10.1992 27.5078 10.2812 27.3984L17.5 20.207L24.6914 27.3984C24.8008 27.5078 24.9922 27.5078 25.1016 27.4258L27.4258 25.1016C27.5352 24.9922 27.5352 24.8281 27.4258 24.7188Z" fill="white"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_388_142">
+                <rect width="35" height="35" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+                
+            <h1 class="cart-is-empty">Cart is empty</h1>
+          
+            <div class="product-rows">
+            </div>
+            <div class="total">
+              <h1 class="cart-total">TOTAL</h1>
+                <span class="total-price">$0</span>
+                  <button class="purchase-btn">PURCHASE</button>
+            </div>
+          </div>
+    </div>
+<!-- <a href="#" class="btn modal__btn">Открыть</a> -->
+        <!-- Header -->
+    @@include('./html/_header.html')
+
+
+    <!-- Main Page -->
+    <main class="main">
+
+        <!-- header-main -->
+        @@include('./html/_header-main.html')
+        <!-- slider chair -->
+        @@include('./html/_chair-slider.html')
+        <!-- professional -->
+        @@include('./html/_professional.html')
+        <!-- clients -->
+        @@include('./html/_clients.html')
+        <!-- product -->
+        @@include('./html/_product.html')
+        <!-- info -->
+        @@include('./html/_info.html')
+        <!-- articles -->
+        @@include('./html/_articles.html')
+
+    </main>
+
+    <!-- Footer -->
+    @@include('./html/_footer.html')
+
+
+    </div>
+    
+
+
+
+    <script src="./js/scripts.min.js"></script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,33 @@
+.section {
+  &__professional {
+    padding-bottom: 90px;
+    @include lg{
+      padding-bottom: 50px;
+    }
+    @include sm{
+      padding-bottom: 35px;
+    }
+
+  }
+}
+.professional {
+ 
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  &__title {
+    font-size: 42px;
+    line-height: 143%;
+    color: $primary;
+    @include xs{
+      font-size: 30px;
+      line-height: 110%;
+      text-align: center;
+    }
+  }
+  
+}
