@@ -27,6 +27,9 @@
       }
     }
   }
+  &__content-item{
+    animation: fade .3s linear;
+  }
   &__content-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

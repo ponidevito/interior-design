@@ -411,6 +411,8 @@ input[type=search]::-webkit-search-results-decoration {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 20px;
+  height: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -749,6 +751,11 @@ input[type=search]::-webkit-search-results-decoration {
 .tabs__header-item.active {
   background-color: black;
   color: #ffffff;
+}
+
+.tabs__content-item {
+  -webkit-animation: fade 0.3s linear;
+          animation: fade 0.3s linear;
 }
 
 .tabs__content-row {
