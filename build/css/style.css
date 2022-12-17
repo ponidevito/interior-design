@@ -445,6 +445,7 @@ input[type=search]::-webkit-search-results-decoration {
 .header__image-basket {
   position: relative;
   z-index: 10;
+  cursor: pointer;
 }
 
 .header__image-basket::after {
