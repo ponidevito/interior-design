@@ -173,14 +173,19 @@ body {
     gap: 10px;
   }
 }
-.cart-box {
+.product-box {
   display: flex;
   align-items: center;
-  gap: 20px;
-  @include md {
-    width: 100%;
-    gap: 10px;
-  }
+  gap: 10px;
+}
+.cart-add {
+  cursor: pointer;
+  width: 20px;
+  height: 100%;
+}
+.cart-minus {
+  width: 20px;
+  height: 35px;
 }
 .cart-image {
   width: 53px;

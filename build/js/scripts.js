@@ -24,7 +24,6 @@ function burger() {
 }
 burgerMenu.addEventListener("click", burger);
 
-
 // scroll
 
 window.onscroll = function () {
@@ -48,7 +47,6 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-
 let html = document.querySelector("html");
 //  search
 function changeItem() {
@@ -56,8 +54,6 @@ function changeItem() {
   document.querySelector(".img-zoom").classList.toggle("_active");
   event.stopPropagation();
 }
-
-
 
 // swiper
 
@@ -248,10 +244,11 @@ price.forEach((item) => {
   });
 });
 
+let productRows = document.getElementsByClassName("product-rows")[0];
+
 function addItemToCart(price, imageSrc) {
   let productRow = document.createElement("div");
   productRow.classList.add("product-row");
-  let productRows = document.getElementsByClassName("product-rows")[0];
   let cartImage = document.getElementsByClassName("cart-image");
 
   for (let i = 0; i < cartImage.length; i++) {
@@ -265,11 +262,16 @@ function addItemToCart(price, imageSrc) {
   <div class="product-row">
         <img class="cart-image" src="${imageSrc}" alt="">
         <span class ="cart-price">${price}</span>
+        <div class="product-box">
+        <span class ="cart-add "> <img class="cart-minus" src="img/header/minus.svg" alt="minus"></span>
         <input class="product-quantity" type="number" value="1">
+        <span class ="cart-add "><img class="cart-plus" src="img/header/plus.svg" alt="minus"></span>
+        </div>
         <button class="remove-btn">Remove</button>
         </div>
         
       `;
+
   productRow.innerHTML = cartRowItems;
   productRows.append(productRow);
   productRow
@@ -279,7 +281,26 @@ function addItemToCart(price, imageSrc) {
     .getElementsByClassName("product-quantity")[0]
     .addEventListener("input", changeQuantity);
   updateCartPrice();
+  
+ 
 }
+productRows.addEventListener("click", (event) => {
+  if (event.target.classList.contains("cart-minus")) {
+    let a = event.target.parentElement.parentElement.firstElementChild.nextElementSibling;
+    console.log(a);
+    if (parseInt(a.value) > 1) a.value = parseInt(a.value) - +1;
+    updateCartPrice()
+
+  }
+  if (event.target.classList.contains("cart-plus")) {
+    let b = event.target.parentElement.parentElement.firstElementChild.nextElementSibling;
+    console.log(b);
+    b.value = parseInt(b.value) +1;
+    updateCartPrice()
+  }
+});
+
+
 // end of add products to cart
 
 // Remove products from cart
@@ -313,6 +334,8 @@ function changeQuantity(event) {
 // end of update quantity input
 
 // update total price
+
+
 function updateCartPrice() {
   let total = 0;
   let i = "";

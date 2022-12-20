@@ -2369,14 +2369,25 @@ body._top {
   margin-bottom: 20px;
 }
 
-.cart-box {
+.product-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: 10px;
+}
+
+.cart-add {
+  cursor: pointer;
+  width: 20px;
+  height: 100%;
+}
+
+.cart-minus {
+  width: 20px;
+  height: 35px;
 }
 
 .cart-image {
@@ -2634,11 +2645,6 @@ input[type=number] {
   .articles__title {
     font-size: 30px;
     line-height: 110%;
-  }
-
-  .cart-box {
-    width: 100%;
-    gap: 10px;
   }
 }
 
