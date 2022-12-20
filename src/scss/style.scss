@@ -85,6 +85,9 @@ body {
 .total {
   text-align: center;
   padding: 20px;
+  @include md{
+    margin-top: 30px;
+  }
   @include sm {
     padding: 0px;
   }
@@ -132,6 +135,7 @@ body {
   padding: 10px;
   border-radius: 5px;
   outline: none;
+  width: 50%;
   @include lg {
     width: 90px;
   }
@@ -164,7 +168,7 @@ body {
   gap: 40px;
   width: 100%;
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   @media (max-width: 1149.98px) {
     gap: 20px;
@@ -177,16 +181,34 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  justify-content: center;
+  @include md{
+    flex-direction: column;
+  }
 }
 .cart-add {
   cursor: pointer;
-  width: 20px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
   height: 100%;
+  transition: .3s ease;
+  &:hover{
+    background-color: rgba(243,243,243,.62);
+    border-radius: 5px;
+  }
 }
-.cart-minus {
+.cart-minus,
+.cart-plus {
   width: 20px;
   height: 35px;
+  @include md{
+    width: 100%;
+    height: 15px;
+  }
 }
+
+
 .cart-image {
   width: 53px;
 }
