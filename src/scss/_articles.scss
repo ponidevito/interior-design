@@ -115,6 +115,9 @@
     }
     .swiper-btn-prev {
       cursor: pointer;
+      min-width: 50px;
+      display: flex;
+      justify-content: center;
       @include md {
         text-align: center;
         width: 30px;
@@ -122,6 +125,9 @@
     }
     .swiper-btn-next {
       cursor: pointer;
+      min-width: 50px;
+      display: flex;
+      justify-content: center;
       @include md {
         width: 30px;
         text-align: center;

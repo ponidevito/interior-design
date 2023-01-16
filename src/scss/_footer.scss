@@ -63,6 +63,9 @@
       line-height: 233%;
       color: #8e8e8e;
     }
+    &:focus{
+      background-color: rgba(255,255,255,.3882352941);;
+    }
     @include xs {
       width: 100%;
     }

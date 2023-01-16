@@ -56,9 +56,15 @@
     }
     .swiper-btn-prev {
       cursor: pointer;
+      min-width: 50px;
+      display: flex;
+      justify-content: center;
     }
     .swiper-btn-next {
       cursor: pointer;
+      min-width: 50px;
+      display: flex;
+      justify-content: center;
     }
     .slide-item {
       &__column {
@@ -81,8 +87,8 @@
       &__box {
         height: 300px;
       }
-      &__buttonBox{
-        &:not(:last-child){
+      &__buttonBox {
+        &:not(:last-child) {
           margin-bottom: 10px;
         }
       }
